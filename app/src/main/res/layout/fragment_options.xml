@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.akristic.memorygem.screens.options.OptionsFragment">
+
+    <data>
+        <variable
+            name="optionsViewModel"
+            type="com.akristic.memorygem.screens.options.OptionsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/options_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_overlay"
+        android:padding="@dimen/medium_margin">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/options_guide_horizontal_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/options_guide_horizontal_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/options_guide_horizontal_middle_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/options_guide_horizontal_middle_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.88" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/options_guide_vertical_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.23" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/options_guide_vertical_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.77" />
+
+        <View
+            android:id="@+id/background_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:background="@drawable/ic_menu_background"
+            app:layout_constraintBottom_toBottomOf="@id/options_guide_horizontal_bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/options_guide_horizontal_middle_top" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TitleTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/options"
+            app:layout_constraintBottom_toTopOf="@id/options_easy_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/options_guide_horizontal_top"
+            />
+
+        <Button
+            android:id="@+id/options_easy_button"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/easy"
+            app:layout_constraintBottom_toTopOf="@+id/options_normal_button"
+            app:layout_constraintLeft_toLeftOf="@id/options_guide_vertical_left"
+            app:layout_constraintRight_toRightOf="@id/options_guide_vertical_right"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/options_normal_button"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/normal"
+            app:layout_constraintBottom_toTopOf="@+id/options_hard_button"
+            app:layout_constraintLeft_toLeftOf="@id/options_guide_vertical_left"
+            app:layout_constraintRight_toRightOf="@id/options_guide_vertical_right"
+            app:layout_constraintTop_toBottomOf="@+id/options_easy_button" />
+
+        <Button
+            android:id="@+id/options_hard_button"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/hard"
+            app:layout_constraintBottom_toTopOf="@+id/options_prank_mode_button"
+            app:layout_constraintLeft_toLeftOf="@id/options_guide_vertical_left"
+            app:layout_constraintRight_toRightOf="@id/options_guide_vertical_right"
+            app:layout_constraintTop_toBottomOf="@+id/options_normal_button" />
+
+        <Button
+            android:id="@+id/options_prank_mode_button"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="25dp"
+            android:text="@string/prank_mode_on"
+            app:layout_constraintBottom_toTopOf="@id/options_ok_button"
+            app:layout_constraintLeft_toLeftOf="@id/options_guide_vertical_left"
+            app:layout_constraintRight_toRightOf="@id/options_guide_vertical_right"
+            app:layout_constraintTop_toBottomOf="@id/options_hard_button" />
+
+        <Button
+            android:id="@+id/options_ok_button"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            app:layout_constraintBottom_toBottomOf="@id/background_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/background_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

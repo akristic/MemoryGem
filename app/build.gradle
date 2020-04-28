@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion 28
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        applicationId "com.akristic.memorygem"
+        minSdkVersion 19
+        targetSdkVersion 28
+        vectorDrawables.useSupportLibrary = true
+        versionCode 9
+        versionName "HART"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            minifyEnabled true
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            minifyEnabled true
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // Support libraries
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta2'
+
+    //Google Play Game services
+    implementation "com.google.android.gms:play-services-games:18.0.0"
+    implementation "com.google.android.gms:play-services-auth:17.0.0"
+    // KTX
+    implementation 'androidx.core:core-ktx:1.2.0-alpha02'
+
+    // Navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
+    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
+
+    // Room and Lifecycle dependencies
+    implementation "androidx.room:room-runtime:2.1.0"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha02'
+    kapt "androidx.room:room-compiler:2.1.0"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0-alpha02'
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
+
+    // Testing
+    testImplementation 'junit:junit:4.13-beta-3'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2-alpha01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha01'
+
+    // Admob
+    implementation 'com.google.android.gms:play-services-measurement-impl:17.0.0'
+    implementation 'com.google.android.gms:play-services-ads:18.0.0'
+
+}

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.akristic.memorygem.screens.game.GameFragment">
+    <data>
+        <variable
+            name="gameViewModel"
+            type="com.akristic.memorygem.screens.game.GameViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/large_margin">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/main_guide_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/main_guide_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/main_button_1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_button_normal"
+            android:src="@drawable/gem_yellow"
+            android:onClick="@{() -> gameViewModel.onButtonClicked(0)}"
+            app:layout_constraintBottom_toBottomOf="@id/main_guide_horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <ImageView
+            android:id="@+id/main_button_2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_button_normal"
+            android:src="@drawable/gem_red"
+            android:onClick="@{() -> gameViewModel.onButtonClicked(1)}"
+            app:layout_constraintBottom_toBottomOf="@id/main_guide_horizontal"
+            app:layout_constraintLeft_toRightOf="@id/main_button_1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9" />
+
+        <ImageView
+            android:id="@+id/main_button_3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/large_margin"
+            android:onClick="@{() -> gameViewModel.onButtonClicked(2)}"
+            android:background="@drawable/ic_button_normal"
+            android:src="@drawable/gem_blue"
+            app:layout_constraintLeft_toLeftOf="@id/main_guide_vertical"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/main_guide_horizontal" />
+
+        <ImageView
+            android:id="@+id/main_button_4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/large_margin"
+            android:onClick="@{() -> gameViewModel.onButtonClicked(3)}"
+            android:background="@drawable/ic_button_normal"
+            android:src="@drawable/gem_purple"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/main_guide_vertical"
+            app:layout_constraintTop_toTopOf="@id/main_guide_horizontal" />
+
+        <ImageView
+            android:id="@+id/main_button_5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_button_normal"
+            android:src="@drawable/gem_green"
+            android:onClick="@{() -> gameViewModel.onButtonClicked(4)}"
+            app:layout_constraintBottom_toBottomOf="@id/main_guide_horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/main_button_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9" />
+
+        <TextView
+            android:id="@+id/game_screen_lives_text"
+            android:layout_width="87dp"
+            android:layout_height="31dp"
+            android:background="@drawable/ic_backround_lives"
+            android:gravity="end"
+            android:paddingTop="5dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            android:text="@{@string/lives(gameViewModel.numberOfLives)}"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorWhiteLight"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/game_screen_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_progress"
+            android:gravity="center"
+            android:paddingRight="25dp"
+            android:text="@{@string/gems_collected(gameViewModel.currentGemsCollectedString, gameViewModel.currentProgressLevelString)}"
+            android:textColor="@color/colorWhiteLight"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/game_screen_time_text" />
+
+        <TextView
+            android:id="@+id/get_ready_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/colorWhiteLight"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/main_guide_horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/game_screen_time_text"
+            android:layout_width="56dp"
+            android:layout_height="31dp"
+            android:background="@drawable/ic_time"
+            android:gravity="end"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:paddingRight="30dp"
+            android:text="@{gameViewModel.currentTimeString}"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhiteLight"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/game_screen_score_text"
+            android:layout_width="87dp"
+            android:layout_height="31dp"
+            android:background="@drawable/bg_score"
+            android:gravity="center_horizontal"
+            android:paddingStart="25dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:text="@{gameViewModel.currentScoreString}"
+            android:textColor="@color/colorWhiteLight"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/game_screen_level_text"
+            android:layout_width="146dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_info_text_background"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:text="@{@string/level(gameViewModel.currentLevelString)}"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/game_screen_progress_text" />
+
+        <ImageView
+            android:id="@+id/monster_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@drawable/zombie"/>
+
+        <ImageView
+            android:id="@+id/main_exit_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="@dimen/large_margin"
+            app:srcCompat="@drawable/ic_baseline_home_24px"
+            android:background="@drawable/ic_button_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+             />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

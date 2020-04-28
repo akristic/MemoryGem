@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Memory Gem</string>
+    <string name="admob_app_id">ca-app-pub-2605143276968480~9654019899</string>
+    <string name="admob_video_id">ca-app-pub-2605143276968480/6329798650</string>
+    <string name="start_button">Start New Game</string>
+    <string name="how_to_play">How To Play</string>
+    <string name="rules">There is only one rule in this game. Repeat the sequence!</string>
+    <string name="ok">OKAY</string>
+    <string name="don_t_show_this_again">Don\'t show this again</string>
+    <string name="menu">MENU</string>
+    <string name="new_game">New Game</string>
+    <string name="resume_game">Resume</string>
+    <string name="restart">Restart</string>
+    <string name="options">Options</string>
+    <string name="quit">Quit</string>
+    <string name="ranking">Ranking</string>
+
+    <string name="failed_you_lost_life">You got this, just try to concentrate more</string>
+    <string name="game_over">Game Over</string>
+    <string name="share_success_text">I get to level %1$d in #MemoryGem with %2$d points!\nhttps://play.google.com/store/apps/details?id=com.akristic.memorygem</string>
+    <string name="sharing_not_available">Sharing Not Available</string>
+    <string name="continue_video">Extra Life</string>
+    <string name="share">Share</string>
+    <string name="lives">Lives: %s</string>
+    <string name="gems_collected">Stage %s of %s</string>
+    <string name="level">Level %s</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="prank_mode_on">Prank ON</string>
+    <string name="prank_mode_off">Prank OFF</string>
+    <string name="try_again">Try Again</string>
+    <string name="extra_life_message">Nice! You got one more life!</string>
+    <string name="game_over_message">You lost all your lives\nYour Score:\n %1$d points</string>
+    <string name="life_lost">Life lost</string>
+    <string name="need_to_sign_in_message">You need to be Sign In with Google to see the Leaderboard or Achievements</string>
+    <string name="google_connect_error_message">Ups! Can\'t connect to Google play. Check your internet connection or try gain later.\nError: %s</string>
+    <string name="achievements">Achievements</string>
+    <string name="easy">Easy</string>
+    <string name="normal">Normal</string>
+    <string name="hard">Hard</string>
+    <string name="birthday">Birthday</string>
+    <string name="please_enter_your_birthday">Please enter your birthday. This is for children privacy protection.</string>
+</resources>

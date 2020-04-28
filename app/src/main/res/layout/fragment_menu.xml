@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.akristic.memorygem.screens.menu.MenuFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menu_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_overlay"
+        android:padding="@dimen/medium_margin">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/main_guide_horizontal_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/main_guide_horizontal_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/main_guide_horizontal_middle_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.18" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/main_guide_horizontal_top_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/main_guide_horizontal_middle_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/main_guide_vertical_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.23" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/main_guide_vertical_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.77" />
+
+        <View
+            android:id="@+id/background_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:background="@drawable/ic_menu_background"
+            app:layout_constraintBottom_toBottomOf="@id/main_guide_horizontal_bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/main_guide_horizontal_top_15" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TitleTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/menu"
+            app:layout_constraintBottom_toTopOf="@id/main_guide_horizontal_middle_top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/main_guide_horizontal_top" />
+
+
+        <Button
+            android:id="@+id/menu_new_game"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/new_game"
+            app:layout_constraintBottom_toTopOf="@id/menu_resume_game"
+            app:layout_constraintLeft_toLeftOf="@id/main_guide_vertical_left"
+            app:layout_constraintRight_toRightOf="@id/main_guide_vertical_right"
+            app:layout_constraintTop_toTopOf="@id/background_view" />
+
+        <Button
+            android:id="@+id/menu_resume_game"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/resume_game"
+            app:layout_constraintBottom_toTopOf="@+id/menu_leaderboards"
+            app:layout_constraintLeft_toLeftOf="@id/main_guide_vertical_left"
+            app:layout_constraintRight_toRightOf="@id/main_guide_vertical_right"
+            app:layout_constraintTop_toBottomOf="@+id/menu_new_game" />
+
+        <Button
+            android:id="@+id/menu_leaderboards"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/ranking"
+            app:layout_constraintBottom_toTopOf="@id/menu_achievements"
+            app:layout_constraintLeft_toLeftOf="@id/main_guide_vertical_left"
+            app:layout_constraintRight_toRightOf="@id/main_guide_vertical_right"
+            app:layout_constraintTop_toBottomOf="@id/menu_resume_game" />
+
+        <Button
+            android:id="@+id/menu_achievements"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/achievements"
+            app:layout_constraintBottom_toTopOf="@id/menu_options"
+            app:layout_constraintLeft_toLeftOf="@id/main_guide_vertical_left"
+            app:layout_constraintRight_toRightOf="@id/main_guide_vertical_right"
+            app:layout_constraintTop_toBottomOf="@id/menu_leaderboards" />
+
+        <Button
+            android:id="@+id/menu_options"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/options"
+            app:layout_constraintBottom_toTopOf="@id/menu_quit"
+            app:layout_constraintLeft_toLeftOf="@id/main_guide_vertical_left"
+            app:layout_constraintRight_toRightOf="@id/main_guide_vertical_right"
+            app:layout_constraintTop_toBottomOf="@id/menu_achievements" />
+
+
+        <Button
+            android:id="@+id/menu_quit"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/quit"
+            app:layout_constraintBottom_toTopOf="@id/main_guide_horizontal_middle_bottom"
+            app:layout_constraintLeft_toLeftOf="@id/main_guide_vertical_left"
+            app:layout_constraintRight_toRightOf="@id/main_guide_vertical_right"
+            app:layout_constraintTop_toBottomOf="@id/menu_options" />
+
+        <Button
+            android:id="@+id/menu_help"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text=" ? "
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"></com.google.android.gms.common.SignInButton>
+
+        <Button
+            android:id="@+id/sign_out_button"
+            style="@style/ButtonTextBlackStyle"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/small_margin"
+            android:background="@drawable/ic_button_normal"
+            android:fontFamily="@font/sigmar_one"
+            android:text="@string/sign_out"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

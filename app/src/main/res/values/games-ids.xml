@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Google Play game services IDs.
+Save this file as res/values/games-ids.xml in your project.
+-->
+<resources>
+    <!-- app_id -->
+    <string name="app_id" translatable="false">370495841428</string>
+    <!-- package_name -->
+    <string name="package_name" translatable="false">com.akristic.memorygem</string>
+    <!-- achievement Legend -->
+    <string name="achievement_legend" translatable="false">CgkIlMmXmuQKEAIQCA</string>
+    <!-- achievement Genius -->
+    <string name="achievement_genius" translatable="false">CgkIlMmXmuQKEAIQAg</string>
+    <!-- achievement Super Natural -->
+    <string name="achievement_super_natural" translatable="false">CgkIlMmXmuQKEAIQAQ</string>
+    <!-- achievement Bored -->
+    <string name="achievement_bored" translatable="false">CgkIlMmXmuQKEAIQAw</string>
+    <!-- achievement Really Bored -->
+    <string name="achievement_really_bored" translatable="false">CgkIlMmXmuQKEAIQCQ</string>
+    <!-- achievement Super Extra Bored -->
+    <string name="achievement_super_extra_bored" translatable="false">CgkIlMmXmuQKEAIQBA</string>
+    <!-- achievement Pranked -->
+    <string name="achievement_pranked" translatable="false">CgkIlMmXmuQKEAIQCg</string>
+    <!-- achievement Life Saver I -->
+    <string name="achievement_life_saver_i" translatable="false">CgkIlMmXmuQKEAIQCw</string>
+    <!-- achievement Life Saver II -->
+    <string name="achievement_life_saver_ii" translatable="false">CgkIlMmXmuQKEAIQDA</string>
+    <!-- achievement Life Saver III -->
+    <string name="achievement_life_saver_iii" translatable="false">CgkIlMmXmuQKEAIQDQ</string>
+    <!-- achievement Die Hard -->
+    <string name="achievement_die_hard" translatable="false">CgkIlMmXmuQKEAIQDg</string>
+    <!-- achievement Fast Start -->
+    <string name="achievement_fast_start" translatable="false">CgkIlMmXmuQKEAIQDw</string>
+    <!-- achievement Need for Speed -->
+    <string name="achievement_need_for_speed" translatable="false">CgkIlMmXmuQKEAIQEA</string>
+    <!-- leaderboard Hall of Fame -->
+    <string name="leaderboard_hall_of_fame" translatable="false">CgkIlMmXmuQKEAIQBQ</string>
+</resources>
